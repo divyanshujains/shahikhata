@@ -5,6 +5,8 @@ import Customer from '../src/components/Customer'
 import Sales from '../src/components/Sales'
 import Products from '../src/components/Products'
 import Navbar from './components/Navbar'
+import Updateproducts from './Updateproducts'
+import Customerrecipt from './components/customer/Customerrecipt'
 
 const App = () => {
   return (
@@ -14,7 +16,10 @@ const App = () => {
             <Route path='/' element={<Home />} />
             <Route path='/customer' element={<Customer />} />
             <Route path='/Products' element={<Products/>} />
-            <Route path='/Sales' element={<Sales />} />
+            <Route path='/Sales' element={<Sales />} /> 
+            <Route path='/recipt/:id' element={<Customerrecipt />} />
+            
+            
         </Routes>
 
      

@@ -2,8 +2,10 @@ import React from 'react'
 
 const Customer = () => {
   return (
-    <div>
-      this is customerpage
+
+    <div className='bg-[#E7E9FF] w-full h-screen'> 
+      
+      
     </div>
   )
 }

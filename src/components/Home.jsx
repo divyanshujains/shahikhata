@@ -4,7 +4,7 @@ import Allslips from './Allslips'
 
 const Home = () => {
   return (
-    <div>
+    <div className='bg-[#E7E9FF] '>
       
         <Allslips />
       
