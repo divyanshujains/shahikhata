@@ -8,6 +8,7 @@ const data = useContext(Allcustomer)
 
 
   return (
+
     <div className="w-full min-h-screen bg-gradient-to-br from-purple-100 to-blue-100 py-6 px-4 flex flex-wrap gap-6">
       {data.map((customer, index) => (
         <Link key={index} to={`/recipt/${customer.id}`} className="bg-white h-fit rounded-xl shadow-md p-4 w-full max-w-xs hover:shadow-blue-300 transition-all duration-300">
@@ -46,16 +47,12 @@ const data = useContext(Allcustomer)
           </div>
 
           <div className="flex justify-end gap-2 mt-4">
-            <button className="px-4 py-1.5 text-xs bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white rounded font-semibold transition">
-              Edit
-            </button>
-            <button className="px-4 py-1.5 text-xs bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white rounded font-semibold transition">
-              Delete
-            </button>
-            <button className="px-4 py-1.5 text-xs bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-white rounded font-semibold transition">
+           
+            
+            <button className="px-4 py-1.5 text-md bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-white rounded font-semibold transition">
               +
             </button>
-            <button className="px-4 py-1.5 text-xs bg-gradient-to-r from-pink-400 to-pink-500 hover:from-pink-500 hover:to-pink-600 text-white rounded font-semibold transition">
+            <button className="px-4 py-1.5 text-md bg-gradient-to-r from-pink-400 to-pink-500 hover:from-pink-500 hover:to-pink-600 text-white rounded font-semibold transition">
               -
             </button>
           </div>

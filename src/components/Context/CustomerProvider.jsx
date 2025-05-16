@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import axios from 'axios';
+import api from '../../../utils/Instance';
 
 
 export const Allcustomer = createContext();
@@ -10,9 +10,9 @@ export const CustomerProvider = ({ children }) => {
   useEffect(() => {
     const fetchdata = async () => {
       try {
-        const response = await axios.get("http://192.168.1.10:8080/api/customer");
+        const response = await api.get("/customer");
       
-        setCustomerdata(response.data); // ✅ Enable setting the data
+        setCustomerdata(response.data); 
       } catch (error) {
         console.log("Error fetching customer data:", error);
       }

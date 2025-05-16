@@ -1,5 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react';
-import axios from 'axios';
+
+import api from '../../../utils/Instance';
 
 export const MyContext = createContext();
 
@@ -10,11 +11,11 @@ export const ProductContext = ({ children }) => {
 
     const fetchdata = async ()=>{
         try {
-            const response = await axios.get("http://192.168.1.10:8080/api/products");
+            const response = await api.get("/products");
             setData(response.data)
             
         } catch (error) {
-         console.log(error);
+         console.error("Error fetching products:", error);
             
         }
     }

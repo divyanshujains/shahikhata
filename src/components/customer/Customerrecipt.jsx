@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import api from '../../../utils/Instance';
 
 const CustomerReceipt = () => {
   const { id } = useParams();
@@ -9,7 +10,7 @@ const CustomerReceipt = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://192.168.1.10:8080/api/receipt/user/${id}`);
+        const response = await api.get(`/receipt/user/${id}`);
         setReceipts(response.data);
       } catch (error) {
         console.error("Error fetching receipt:", error);
